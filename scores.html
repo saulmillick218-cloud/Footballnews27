@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0f">
+<title>Live Scores | FootballNews27</title>
+<link rel="stylesheet" href="scores.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/"><span class="brandmark">F27</span><span>FOOTBALL<span class="red">NEWS27</span></span></a>
+  <span class="live-label"><i></i> REAL MATCH DATA</span>
+</header>
+<main>
+  <section class="hero">
+    <p class="kicker">MATCH CENTRE</p>
+    <h1>LIVE <span> SCORES.</span></h1>
+    <p class="intro">Live, upcoming and finished matches from football-data.org. Scores appear only when supplied by the data provider.</p>
+    <div class="hero-row"><span id="last-updated">Connecting to match data…</span><button id="refresh" type="button">↻ Refresh</button></div>
+  </section>
+  <nav class="tabs" aria-label="Match status filters">
+    <button class="tab active" data-filter="ALL" type="button">ALL MATCHES</button>
+    <button class="tab" data-filter="LIVE" type="button">🔴 LIVE</button>
+    <button class="tab" data-filter="SCHEDULED" type="button">UPCOMING</button>
+    <button class="tab" data-filter="FINISHED" type="button">FINISHED</button>
+  </nav>
+  <div id="status" class="notice" role="status">Loading real match data…</div>
+  <section id="matches" class="matches" aria-live="polite"></section>
+  <section id="empty" class="empty" hidden><div class="ball">⚽</div><h2>No matches in this category</h2><p>The API may not currently return matches for this filter. Try All Matches or refresh.</p></section>
+  <section class="footnote"><b>DATA NOTE</b><p>Match availability depends on your football-data.org API plan. The page does not create sample fixtures or scores. Scores may remain blank before a match has a recorded result.</p></section>
+</main>
+<footer><a href="/">FootballNews27</a> · Match data from football-data.org</footer>
+<script src="scores.js"></script>
+</body></html>
